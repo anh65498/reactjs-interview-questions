@@ -563,7 +563,15 @@ You can download the PDF and Epub version of this repository from the latest run
     
 10. ### What is the difference between state and props?
 
-    Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+    Props:
+    - Props can't be changed by child component 
+    - Props comes from parent Component, flows in 1 direction from parent Component to child Component
+    - Child Props object changes when parent's Component props changes
+
+    State: 
+    - State can be changed by the child component and the component itself
+    - State is defined in a component itself
+    - Only Class Component has states, but both Class Component and Functional Component can have props
 
 
    **[⬆ Back to Top](#table-of-contents)**
