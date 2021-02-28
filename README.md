@@ -389,7 +389,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-2.5. ### What is unidirectional data binding and data flow?
+3. ### What is unidirectional data binding and data flow?
 
   React manages the data in a unidirectional way, from parent to child. Child components are not able to update the data that is coming from parent component.
     
