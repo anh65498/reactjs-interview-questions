@@ -784,7 +784,7 @@ You can download the PDF and Epub version of this repository from the latest run
     
 19. ### What is the use of refs?
 
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    Every JSX element has a ref attribute that we can pass a ref variable that allows us to directly change/access the DOM node or an instance of a component.  Ref *should be avoided* in most cases because we want to interact with the Virtual DOM instead of the Real DOM, however, they can be useful when you need a direct access to the DOM element or 
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -1089,7 +1089,7 @@ You can download the PDF and Epub version of this repository from the latest run
     
 35. ### What are Higher-Order Components?
 
-    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component (kinda like a decorator for Components). Basically, it's a pattern that is derived from React's compositional nature.
 
     We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
 
@@ -1103,7 +1103,8 @@ You can download the PDF and Epub version of this repository from the latest run
     2. Render hijacking.
     3. State abstraction and manipulation.
     4. Props manipulation.
-
+    
+    HOCs are also common in third-party React libraries, such as Redux’s connect and Relay’s createFragmentContainer.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -1133,7 +1134,7 @@ You can download the PDF and Epub version of this repository from the latest run
     
 37. ### What is context?
 
-    *Context* provides a way to pass data through the component tree without having to pass props down manually at every level.
+    *Context* provides a way to pass data through the component tree without having to pass props down manually at every level like props. Props can only be passed down 1 level at a time (For example: from Parent -> Child, then Child -> Grandchild). If we use Context, we can pass data directly from Parent -> Grandchild within the same tree.
 
     For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
 
@@ -1673,7 +1674,7 @@ You can download the PDF and Epub version of this repository from the latest run
     
 64. ### What is the impact of indexes as keys?
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    When we create a list of elements using the <li> element, we need to assign a unique key values to each of them. It's a way for React to uniquely identify each item in the key to quickly access/change the <li> element. Keys should be stable, predictable, and unique.
 
     In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.
 
@@ -4919,8 +4920,10 @@ You can download the PDF and Epub version of this repository from the latest run
    **[⬆ Back to Top](#table-of-contents)**
     
 226. ### What are hooks?
-     Hooks is a new feature(React 16.8) that lets you use state and other React features without writing a class.
-
+     Hooks is a new feature(React 16.8) that lets you use state and other React features in a Functional Component instead of a class Component.
+     React supports both hooks in Functional Component and state in Class Component. However, React dev team recommends us to use Functional Component as much as possible because it has less overhead, faster performance and less code to write. 
+     
+     
      Let's see an example of useState hook example,
      ```jsx
      import { useState } from 'react';
