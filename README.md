@@ -31,6 +31,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |   | **Core React** |
 |1  | [What is React?](#what-is-react) |
 |2  | [What are the major features of React?](#what-are-the-major-features-of-react) |
+|2.5| [What is unidirectional data binding and data flow?](#what-is-unifirectional-data-binding-and-data-flow) |
 |3  | [What is JSX?](#what-is-jsx) |
 |4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
 |5  | [How to create components in React?](#how-to-create-components-in-react) |
@@ -388,7 +389,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-3. ### What is JSX?
+2.5. ### What is unidirectional data binding and data flow?
+
+  React manages the data in a unidirectional way, from parent to child. Child components are not able to update the data that is coming from parent component.
+    
+4. ### What is JSX?
 
     *JSX* is a XML-like syntax extension to ECMAScript (the acronym stands for *JavaScript XML*). Basically it just provides syntactic sugar for the `React.createElement()` function, giving us expressiveness of JavaScript along with HTML like template syntax.
 
